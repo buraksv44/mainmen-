@@ -11,7 +11,7 @@ public class Play : MonoBehaviour
     public Animator anim;
     public GameObject sahne, homeButton;
     public GameObject settingmain,moneymain,shopmain,questmain,emailmain,carmain,levelmain;
-    public AudioSource playsound,levelsond,carsound,emailsound,questsound,shopsound,moneysound,scoresound,settingssound,homesound;
+    public AudioSource playsound, levelsond, carsound, emailsound, questsound, shopsound, moneysound, scoresound, settingssound, homesound;
     public AudioClip soundcilp;
     private void Start()
     {
@@ -151,7 +151,7 @@ public class Play : MonoBehaviour
         sahne.SetActive(true);
         anim.SetTrigger("end");
         yield return new WaitForSeconds(0.6f);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
      IEnumerator Settingspass()
     {
